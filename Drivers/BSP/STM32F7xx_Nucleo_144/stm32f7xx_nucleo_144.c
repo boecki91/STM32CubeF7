@@ -353,6 +353,7 @@ uint32_t BSP_PB_GetState(Button_TypeDef Button)
   */
 static void SPIx_MspInit(SPI_HandleTypeDef *hspi)
 {
+  UNUSED(hspi);
   GPIO_InitTypeDef  GPIO_InitStruct;  
   
   /*** Configure the GPIOs ***/  
@@ -719,6 +720,7 @@ void LCD_Delay(uint32_t Delay)
   */
 static void ADCx_MspInit(ADC_HandleTypeDef *hadc)
 {
+  UNUSED(hadc);
   GPIO_InitTypeDef  GPIO_InitStruct;
   
   /*** Configure the GPIOs ***/  
@@ -744,6 +746,7 @@ static void ADCx_MspInit(ADC_HandleTypeDef *hadc)
   */
 static void ADCx_MspDeInit(ADC_HandleTypeDef *hadc)
 {
+  UNUSED(hadc);
   GPIO_InitTypeDef  GPIO_InitStruct;
 
   /*** DeInit the ADC peripheral ***/ 

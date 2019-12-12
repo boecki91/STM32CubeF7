@@ -499,6 +499,7 @@ HAL_StatusTypeDef FMC_NAND_Init(FMC_NAND_TypeDef *Device, FMC_NAND_InitTypeDef *
   */
 HAL_StatusTypeDef FMC_NAND_CommonSpace_Timing_Init(FMC_NAND_TypeDef *Device, FMC_NAND_PCC_TimingTypeDef *Timing, uint32_t Bank)
 {
+  UNUSED(Bank);
   uint32_t tmpr = 0;  
   
   /* Check the parameters */
@@ -538,6 +539,7 @@ HAL_StatusTypeDef FMC_NAND_CommonSpace_Timing_Init(FMC_NAND_TypeDef *Device, FMC
   */
 HAL_StatusTypeDef FMC_NAND_AttributeSpace_Timing_Init(FMC_NAND_TypeDef *Device, FMC_NAND_PCC_TimingTypeDef *Timing, uint32_t Bank)
 {
+  UNUSED(Bank);
   uint32_t tmpr = 0;  
   
   /* Check the parameters */ 
@@ -574,6 +576,7 @@ HAL_StatusTypeDef FMC_NAND_AttributeSpace_Timing_Init(FMC_NAND_TypeDef *Device, 
   */
 HAL_StatusTypeDef FMC_NAND_DeInit(FMC_NAND_TypeDef *Device, uint32_t Bank)
 {
+  UNUSED(Bank);
   /* Check the parameters */ 
   assert_param(IS_FMC_NAND_DEVICE(Device)); 
   assert_param(IS_FMC_NAND_BANK(Bank));
@@ -618,6 +621,7 @@ HAL_StatusTypeDef FMC_NAND_DeInit(FMC_NAND_TypeDef *Device, uint32_t Bank)
   */    
 HAL_StatusTypeDef FMC_NAND_ECC_Enable(FMC_NAND_TypeDef *Device, uint32_t Bank)
 {
+  UNUSED(Bank);
   /* Check the parameters */ 
   assert_param(IS_FMC_NAND_DEVICE(Device)); 
   assert_param(IS_FMC_NAND_BANK(Bank));
@@ -636,7 +640,8 @@ HAL_StatusTypeDef FMC_NAND_ECC_Enable(FMC_NAND_TypeDef *Device, uint32_t Bank)
   * @retval HAL status
   */  
 HAL_StatusTypeDef FMC_NAND_ECC_Disable(FMC_NAND_TypeDef *Device, uint32_t Bank)  
-{  
+{
+  UNUSED(Bank);
   /* Check the parameters */ 
   assert_param(IS_FMC_NAND_DEVICE(Device)); 
   assert_param(IS_FMC_NAND_BANK(Bank));
@@ -657,6 +662,7 @@ HAL_StatusTypeDef FMC_NAND_ECC_Disable(FMC_NAND_TypeDef *Device, uint32_t Bank)
   */
 HAL_StatusTypeDef FMC_NAND_GetECC(FMC_NAND_TypeDef *Device, uint32_t *ECCval, uint32_t Bank, uint32_t Timeout)
 {
+  UNUSED(Bank);
   uint32_t tickstart = 0;
 
   /* Check the parameters */ 
@@ -970,6 +976,7 @@ HAL_StatusTypeDef FMC_SDRAM_WriteProtection_Disable(FMC_SDRAM_TypeDef *Device, u
   */  
 HAL_StatusTypeDef FMC_SDRAM_SendCommand(FMC_SDRAM_TypeDef *Device, FMC_SDRAM_CommandTypeDef *Command, uint32_t Timeout)
 {
+  UNUSED(Timeout);
   __IO uint32_t tmpr = 0;
   
   /* Check the parameters */

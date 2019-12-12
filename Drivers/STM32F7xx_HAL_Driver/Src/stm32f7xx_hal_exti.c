@@ -383,6 +383,7 @@ void HAL_EXTI_IRQHandler(EXTI_HandleTypeDef *hexti)
   */
 uint32_t HAL_EXTI_GetPending(EXTI_HandleTypeDef *hexti, uint32_t Edge)
 {
+  UNUSED(Edge);
   __IO uint32_t *regaddr;
   uint32_t regval;
 
@@ -410,6 +411,7 @@ uint32_t HAL_EXTI_GetPending(EXTI_HandleTypeDef *hexti, uint32_t Edge)
   */
 void HAL_EXTI_ClearPending(EXTI_HandleTypeDef *hexti, uint32_t Edge)
 {
+  UNUSED(Edge);
   /* Check parameters */
   assert_param(IS_EXTI_LINE(hexti->Line));
   assert_param(IS_EXTI_PENDING_EDGE(Edge));

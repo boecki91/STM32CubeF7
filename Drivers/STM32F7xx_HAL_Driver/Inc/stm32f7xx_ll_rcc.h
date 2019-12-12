@@ -53,6 +53,7 @@ static const uint8_t aRCC_PLLSAIDIVRPrescTable[4] = {2, 4, 8, 16};
   */
 /* Private constants ---------------------------------------------------------*/
 /* Private macros ------------------------------------------------------------*/
+#define UNUSED(X) (void)X      /* To avoid gcc/g++ warnings */
 #if defined(USE_FULL_LL_DRIVER)
 /** @defgroup RCC_LL_Private_Macros RCC Private Macros
   * @{
@@ -2747,6 +2748,7 @@ __STATIC_INLINE uint32_t LL_RCC_GetI2CClockSource(uint32_t I2Cx)
   */
 __STATIC_INLINE uint32_t LL_RCC_GetLPTIMClockSource(uint32_t LPTIMx)
 {
+  UNUSED(LPTIMx);
   return (uint32_t)(READ_BIT(RCC->DCKCFGR2, RCC_DCKCFGR2_LPTIM1SEL));
 }
 
